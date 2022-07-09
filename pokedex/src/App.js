@@ -1,10 +1,10 @@
 
-import { Router } from "./routes/Routes";
+import Main from "./pages/components/Main";
 
 function App() {
   return (
     <>
-      <Router />
+    <Main />
     </>
   );
 }
