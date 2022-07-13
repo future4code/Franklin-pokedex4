@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Button = styled.button`
@@ -19,8 +21,8 @@ box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 cursor: pointer;
 `
 
-const Card = ({ pokemon, loading, infoPokemon }) => {
-//   console.log(pokemon);
+const Card = ({ pokemon, loading }) => {
+const navigate = useNavigate()
   return (
     <>
       {loading ? (
@@ -37,7 +39,7 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
                 />
                 <h2>{item.name}</h2>
                 <Button>Adicionar a Pokédex</Button>
-                <Button key={item.id} onClick={()=>infoPokemon(item)}>Ver Detalhes</Button>
+                <Button key={item.id} onClick={()=>navigate(`/details/${item.id}`)}>Ver Detalhes</Button>
               </div>
             </>
           );
