@@ -21,7 +21,7 @@ box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 cursor: pointer;
 `
 
-const Card = ({ pokemon, loading, infoPokemon }) => {
+const Card = ({ pokemon, loading }) => {
 const navigate = useNavigate()
   return (
     <>

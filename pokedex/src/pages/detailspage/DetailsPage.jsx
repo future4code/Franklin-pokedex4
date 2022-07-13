@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {useParams} from "react-router-dom"
 
 export const Container = styled.div`
   height: 100vh;
@@ -18,12 +19,12 @@ export const Images = styled.div`
   flex-direction: column;
   border: 1px solid red;
 
-  & > div:nth-child(1) {
+  & > img:nth-child(1) {
     margin-bottom: 20px;
   }
 `;
 
-export const CardImg = styled.div`
+export const CardImg = styled.img`
   border: solid 1px black;
   height: 210px;
   width: 210px;
@@ -50,12 +51,17 @@ export const Moves = styled.div`
 `;
 
 function DetailsPage() {
+  const pathParams = useParams()
   return (
     <Container>
       <ContainerData>
         <Images>
-          <CardImg />
-          <CardImg />
+          <CardImg 
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pathParams.pokemonId}.png`}
+          />
+          <CardImg 
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${pathParams.pokemonId}.png`}
+          />
         </Images>
         <States />
         <ContainerTypeMoves>
