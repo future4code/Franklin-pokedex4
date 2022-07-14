@@ -14,16 +14,15 @@ body{
     display: flex;
     background-color: #A83A3A;
 }
-.left-content,.right-content{
-    flex-basis: 50%;
-}
+
 .left-content{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
-    grid-gap:5rem;
+    grid-template-columns: repeat(auto-fit,minmax(280px, auto));
+    justify-content: center;
 }
 .card{
-    width: 300px;
+    width: 280px;
     background-color:#FFFFFF;
     border-radius: 1rem;
     box-shadow: 0 5px 5px rgba(0,0,0,0.5);

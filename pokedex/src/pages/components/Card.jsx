@@ -31,7 +31,7 @@ const navigate = useNavigate()
         pokemon.map((item) => {
           return (
             <>
-              <div className="card">
+              <div key={item.id} className="card">
                 <h2>{item.id}</h2>
                 <img
                   src={item.sprites.front_default}
