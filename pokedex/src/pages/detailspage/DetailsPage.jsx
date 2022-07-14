@@ -9,6 +9,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #A83A3A;
 `;
 
 export const ContainerData = styled.div`
@@ -30,6 +31,9 @@ export const CardImg = styled.img`
   height: 210px;
   width: 210px;
   border-radius: 8px;
+  background-color:#FFFFFF;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  padding: 0 1.5rem;
 `;
 
 export const States = styled.div`
@@ -41,7 +45,9 @@ export const States = styled.div`
   flex-direction: column;
   justify-content: space-around;
   border-radius: 8px;
-  
+  background-color:#FFFFFF;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  padding: 0 1.5rem;
 `;
 export const ContainerTypeMoves = styled.div`
   width: 210px;
@@ -55,6 +61,9 @@ export const Type = styled.div`
   justify-content: space-around;
   padding: 5px;
   border-radius: 8px;
+  background-color:#FFFFFF;;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  padding: 0 1.5rem;
 `;
 
 export const Moves = styled.div`
@@ -63,6 +72,9 @@ export const Moves = styled.div`
   overflow: auto;
   padding-left: 10px;
   border-radius: 8px;
+  background-color:#FFFFFF;;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+  padding: 0 1.5rem;
   
   & > h2 {
     text-align: center;
