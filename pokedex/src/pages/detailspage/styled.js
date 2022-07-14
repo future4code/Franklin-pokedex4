@@ -28,7 +28,7 @@ export const CardImg = styled.img`
   height: 210px;
   width: 210px;
   border-radius: 8px;
-  background-color: #FFFFFF;
+background-color: #FFFFFF;
 `;
 
 export const States = styled.div`
