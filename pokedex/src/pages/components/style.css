@@ -13,6 +13,7 @@ body{
     padding-top: 100px;
     display: flex;
     background-color: #A83A3A;
+    justify-content: center;
 }
 
 .left-content{
