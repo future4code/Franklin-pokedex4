@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import Pokeinfo from "./Pokeinfo";
 import "./style.css";
+
 const Main = () => {
   const [pokeData, setPokeData] = useState([]);
   const [loading, setLoading] = useState(true);
