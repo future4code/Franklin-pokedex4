@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #a83a3a;
 `;
 
 export const ContainerData = styled.div`
@@ -27,7 +28,7 @@ export const CardImg = styled.img`
   height: 210px;
   width: 210px;
   border-radius: 8px;
-  box-shadow:rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  background-color: #FFFFFF;
 `;
 
 export const States = styled.div`
@@ -39,8 +40,7 @@ export const States = styled.div`
   flex-direction: column;
   justify-content: space-around;
   border-radius: 8px;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-  
+  background-color: #FFFFFF;  
 `;
 export const ContainerTypeMoves = styled.div`
   width: 210px;
@@ -54,7 +54,7 @@ export const Type = styled.div`
   justify-content: space-around;
   padding: 5px;
   border-radius: 8px;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  background-color: #FFFFFF;
 `;
 
 export const Moves = styled.div`
@@ -63,7 +63,7 @@ export const Moves = styled.div`
   overflow: auto;
   padding-left: 10px;
   border-radius: 8px;
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+  background-color: #FFFFFF;
   
   & > h2 {
     text-align: center;
