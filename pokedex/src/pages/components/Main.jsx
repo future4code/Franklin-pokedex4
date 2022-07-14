@@ -1,8 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import Pokeinfo from "./Pokeinfo";
 import "./style.css";
+import Header from "../../components/header/Header"
 
 const Main = () => {
   const [pokeData, setPokeData] = useState([]);
@@ -37,37 +37,41 @@ const Main = () => {
   }, [url]);
 
   return (
-    <div className="container">
-      <div className="left-content">
-        <Card
-          pokemon={pokeData}
-          loading={loading}
-          infoPokemon={(poke) => setPokeDex(poke)}
-        />
-        <div className="btn-group">
-         {prevUrl && <button
-            onClick={() => {
-              setPokeData([]);
+    <>
+      <Header />
+      <div className="container">
+        <div className="left-content">
+          <Card
+            pokemon={pokeData}
+            loading={loading}
+            infoPokemon={(poke) => setPokeDex(poke)}
+          />
+          <div className="btn-group">
+            {prevUrl && (
+              <button
+                onClick={() => {
+                  setPokeData([]);
 
-              setUrl(prevUrl);
-            }}
-          >
-            Anterior
-          </button> }
-         { nextUrl && <button
-            onClick={() => {
-              setPokeData([]);
-              setUrl(nextUrl);
-            }}
-          >
-            Próxima
-          </button>}
+                  setUrl(prevUrl);
+                }}
+              >
+                Anterior
+              </button>
+            )}
+            {nextUrl && (
+              <button
+                onClick={() => {
+                  setPokeData([]);
+                  setUrl(nextUrl);
+                }}
+              >
+                Próxima
+              </button>
+            )}
+          </div>
         </div>
       </div>
-      <div className="right-content">
-        <Pokeinfo data={pokeDex} />
-      </div>
-    </div>
+    </>
   );
 };
 

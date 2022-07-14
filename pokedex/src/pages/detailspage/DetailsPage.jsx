@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Images } from "./styled";
+import { CardImg } from "./styled";
+import { States } from "./styled";
+import { ContainerTypeMoves } from "./styled";
+import { Container } from "./styled";
+import { ContainerData } from "./styled";
+import { Type } from "./styled";
+import { Moves } from "./styled";
 
 export const Container = styled.div`
   height: 100vh;

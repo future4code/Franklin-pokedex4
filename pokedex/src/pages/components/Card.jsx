@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useNavigate } from 'react-router-dom';
 
 const CardContainer = styled.div `
-width: 300px;
+width: 280px;
 background-color:#FFFFFF;
 border-radius: 1rem;
 box-shadow: 0 5px 5px rgba(0,0,0,0.5);
@@ -53,7 +53,7 @@ const navigate = useNavigate()
         pokemon.map((item) => {
           return (
             <>
-              <CardContainer>
+              <CardContainer key={item.id}>
                 <h2>{item.id}</h2>
                 <CardImg
                   src={item.sprites.front_default}
