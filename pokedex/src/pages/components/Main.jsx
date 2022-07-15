@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import "./style.css";
-import Header from "../../components/header/Header"
+import Header from "../../components/header/Header";
 
 const Main = () => {
   const [pokeData, setPokeData] = useState([]);

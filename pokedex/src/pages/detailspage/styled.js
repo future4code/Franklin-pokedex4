@@ -28,7 +28,8 @@ export const CardImg = styled.img`
   height: 210px;
   width: 210px;
   border-radius: 8px;
-background-color: #FFFFFF;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 `;
 
 export const States = styled.div`
@@ -41,6 +42,7 @@ export const States = styled.div`
   justify-content: space-around;
   border-radius: 8px;
   background-color: #FFFFFF;  
+  box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 `;
 export const ContainerTypeMoves = styled.div`
   width: 210px;
@@ -55,6 +57,7 @@ export const Type = styled.div`
   padding: 5px;
   border-radius: 8px;
   background-color: #FFFFFF;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 `;
 
 export const Moves = styled.div`
@@ -64,6 +67,7 @@ export const Moves = styled.div`
   padding-left: 10px;
   border-radius: 8px;
   background-color: #FFFFFF;
+  box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
   
   & > h2 {
     text-align: center;

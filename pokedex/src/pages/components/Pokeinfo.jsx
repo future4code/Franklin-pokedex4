@@ -1,4 +1,26 @@
 import React from "react";
+import styled from "styled-components";
+
+const Abilits = styled.div `
+width: 30%;
+margin: auto;
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 1rem;
+`
+
+const AbilitsGroup = styled.div `
+background-color: #b74555;
+color: white;
+padding: 0.5rem;
+font-size: 15px;
+border-radius: 8px;
+`
+
+const BaseStat = styled.div `
+margin-top: 2rem
+`
 
 const Pokeinfo = ({ data }) => {
   console.log(data);
@@ -13,18 +35,18 @@ const Pokeinfo = ({ data }) => {
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
             alt="icone"
           />
-          <div className="abilities" key={data.id}>
+          <Abilits key={data.id}>
             {data.abilities.map((poke) => {
               return (
                 <>
-                  <div className="group">
+                  <AbilitsGroup>
                     <h2>{poke.ability.name}</h2>
-                  </div>
+                  </AbilitsGroup>
                 </>
               );
             })}
-          </div>
-          <div className="base-stat">
+          </Abilits>
+          <BaseStat>
             {data.stats.map((poke) => {
               return (
                 <>
@@ -32,7 +54,7 @@ const Pokeinfo = ({ data }) => {
                 </>
               );
             })}
-          </div>
+          </BaseStat>
         </>
       )}
     </>
