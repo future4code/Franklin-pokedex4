@@ -9,6 +9,7 @@ import { Container } from "./styled";
 import { ContainerData } from "./styled";
 import { Type } from "./styled";
 import { Moves } from "./styled";
+import { Progress } from "./styled";
 
 function DetailsPage() {
   const pathParams = useParams();
@@ -41,26 +42,29 @@ function DetailsPage() {
         <States>
           <h1>States</h1>
           {stats.map((stat) => {
-            return(
-              <p key={stat.stat.name}><strong>{stat.stat.name}:</strong> {stat.base_stat}</p>
-            )
+            if (stat.stat.name === "hp") {
+              return (
+                <p><strong>Hp:</strong><Progress value={stat.base_stat} max="100">{stat.base_stat}</Progress></p>
+              );
+            }
+            return (
+              <p key={stat.stat.name}>
+                <strong>{stat.stat.name}:</strong> {stat.base_stat}
+              </p>
+            );
           })}
         </States>
         <ContainerTypeMoves>
           <Type>
             <h2>Types</h2>
             {types.map((type) => {
-                return (
-                  <p key={type.slot}>{type.type.name}</p>
-                )
+              return <p key={type.slot}>{type.type.name}</p>;
             })}
           </Type>
           <Moves>
             <h2>Moves</h2>
             {moves.map((move) => {
-              return (
-                <p key={move.move.name}>{move.move.name}</p>
-              )
+              return <p key={move.move.name}>{move.move.name}</p>;
             })}
           </Moves>
         </ContainerTypeMoves>

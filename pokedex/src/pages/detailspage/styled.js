@@ -73,3 +73,16 @@ export const Moves = styled.div`
     text-align: center;
   }
 `;
+
+export const Progress = styled.progress`
+background-color: #a83a3a;
+border-radius: 5px;
+
+&::-webkit-progress-bar {
+  border-radius: 5px;
+}
+&::-webkit-progress-value {
+  background-color: #a83a3a;
+  border-radius: 5px;
+}
+`
