@@ -1,26 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const Abilits = styled.div `
-width: 30%;
-margin: auto;
-display: flex;
-justify-content: space-around;
-align-items: center;
-margin-top: 1rem;
-`
-
-const AbilitsGroup = styled.div `
-background-color: #b74555;
-color: white;
-padding: 0.5rem;
-font-size: 15px;
-border-radius: 8px;
-`
-
-const BaseStat = styled.div `
-margin-top: 2rem
-`
+import { Abilits, AbilitsGroup, BaseStat } from "./styled";
 
 const Pokeinfo = ({ data }) => {
   console.log(data);

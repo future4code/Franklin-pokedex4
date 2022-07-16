@@ -12,3 +12,8 @@ justify-content: center;
     font-size: 50px;
 }
 `
+export const ImgPoke = styled.img `
+display: flex;
+justify-content: center;
+height: 5em;
+`
