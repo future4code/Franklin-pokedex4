@@ -6,8 +6,7 @@ height: 100px;
 background-color: #A83A3A;
 display: flex;
 align-items: center;
-justify-content: center;
-
+justify-content: space-around;
 > h1 {
     font-size: 50px;
 }

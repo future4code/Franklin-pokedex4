@@ -1,18 +1,24 @@
-import React from "react"
-import { Header, ImgPoke } from "./styled"
-import { ButtonHome} from "../../pages/initialpage/styled"
+import React from "react";
+import { Header, ImgPoke } from "./styled";
+import { ButtonHome } from "../../pages/initialpage/styled";
 import logo from "../../images/logo-pokemon.png";
+import { useNavigate } from "react-router-dom";
 
-function HeaderComponent() {
-    return (
-        <Header>
-            <div>
-               <ImgPoke src={logo}/>
-            </div>
-            <div>
-                <ButtonHome>Pokédex</ButtonHome>
-            </div>
-        </Header>
-    )
+function HeaderComponent(props) {
+  console.log(props);
+  const navigate = useNavigate();
+  return (
+    <Header>
+      {props.paginaDetalhe === true && (
+        <ButtonHome onClick={() => navigate("/home")}>Voltar</ButtonHome>
+      )}
+      <div>
+        <ImgPoke src={logo} />
+      </div>
+      <div>
+        <ButtonHome>Pokédex</ButtonHome>
+      </div>
+    </Header>
+  );
 }
-export default HeaderComponent
+export default HeaderComponent;
