@@ -31,7 +31,7 @@ function DetailsPage() {
   }, []);
   return (
     <>
-    <HeaderComponent />
+    <HeaderComponent paginaDetalhe={true} />
       <Container>
         <ContainerData>
           <Images>
