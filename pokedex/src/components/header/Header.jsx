@@ -1,12 +1,17 @@
 import React from "react"
-import { Header } from "./styled"
-import { ButtonHome } from "../../pages/initialpage/styled"
+import { Header, ImgPoke } from "./styled"
+import { ButtonHome} from "../../pages/initialpage/styled"
+import logo from "../../images/logo-pokemon.png";
 
 function HeaderComponent() {
     return (
         <Header>
-            <h1>Pokémons</h1>
-            <ButtonHome>Pokédex</ButtonHome>
+            <div>
+               <ImgPoke src={logo}/>
+            </div>
+            <div>
+                <ButtonHome>Pokédex</ButtonHome>
+            </div>
         </Header>
     )
 }

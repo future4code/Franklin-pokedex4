@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-
-
 export const BackgroundPage = styled.div`
   background-color: #a83a3a;
   background-size: cover;

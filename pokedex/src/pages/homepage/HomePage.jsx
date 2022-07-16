@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
 import "./style.css";
 import Header from "../../components/header/Header";
+import Card from "../../components/card/Card";
 
-const Main = () => {
+const HomePage = () => {
   const [pokeData, setPokeData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [url, setUrl] = useState("https://pokeapi.co/api/v2/pokemon/");
@@ -75,4 +75,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default HomePage;
