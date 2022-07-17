@@ -98,4 +98,5 @@ body{
     box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
     font-family: 'VT323';
     font-size: 2vh;
+    cursor: pointer;
 }

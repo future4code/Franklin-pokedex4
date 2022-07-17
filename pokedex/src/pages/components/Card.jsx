@@ -19,7 +19,7 @@ box-shadow: 0 5px 5px rgb(0 0 0 / 50%);
 cursor: pointer;
 `
 
-const Card = ({ pokemon, loading, infoPokemon }) => {
+const Card = ({ pokemon, loading, infoPokemon, pokedexPokemon }) => {
 //   console.log(pokemon);
   return (
     <>
@@ -36,7 +36,7 @@ const Card = ({ pokemon, loading, infoPokemon }) => {
                   alt="icone"
                 />
                 <h2>{item.name}</h2>
-                <Button>Adicionar a Pokédex</Button>
+                <Button key={item.id} onClick={() => pokedexPokemon(item)}>Adicionar a Pokédex</Button>
                 <Button key={item.id} onClick={()=>infoPokemon(item)}>Ver Detalhes</Button>
               </div>
             </>

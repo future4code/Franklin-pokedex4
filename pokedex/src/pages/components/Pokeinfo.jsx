@@ -1,7 +1,6 @@
 import React from "react";
 
 const Pokeinfo = ({ data }) => {
-  console.log(data);
   return (
     <>
       {!data ? (
