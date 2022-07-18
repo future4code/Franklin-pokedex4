@@ -7,6 +7,7 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #a83a3a;
+  flex-direction: column;
 `;
 
 export const ContainerData = styled.div`

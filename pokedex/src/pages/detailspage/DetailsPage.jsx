@@ -11,12 +11,16 @@ import { Type } from "./styled";
 import { Moves } from "./styled";
 import { Progress } from "./styled";
 import HeaderComponent from "../../components/header/Header";
+import { ButtonHome } from "../initialpage/styled";
+import { FavoriteContext } from "../../pages/favorites/favoritesContext"
 
 function DetailsPage() {
   const pathParams = useParams();
   const [moves, setMoves] = useState([]);
   const [stats, setStats] = useState([]);
   const [types, setTypes] = useState([]);
+  const [data, setData] = useState({})
+  const { favorite, setFavorite } = React.useContext(FavoriteContext);
   useEffect(() => {
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pathParams.pokemonId}/`)
@@ -24,9 +28,25 @@ function DetailsPage() {
         setMoves(response.data.moves);
         setStats(response.data.stats);
         setTypes(response.data.types);
+        setData(response.data);
       })
       .catch((error) => {});
   }, []);
+
+  const addFavorite = () => {
+    const myFavorites = [...favorite];
+    const pokeIndex = myFavorites.indexOf(data);
+    myFavorites.includes(data)
+      ? myFavorites.splice(pokeIndex, 1) &&
+        alert(
+          `pokemon ${data.name} removido com sucesso,Confira na sua POKEDEX!`
+        )
+      : myFavorites.push(data) &&
+        alert(
+          `pokemon ${data.name} ADICIONADO com sucesso,Confira na sua POKEDEX!`
+        );
+    setFavorite(myFavorites);
+  };
   return (
     <>
       <HeaderComponent paginaDetalhe={true} />
@@ -76,6 +96,9 @@ function DetailsPage() {
             </Moves>
           </ContainerTypeMoves>
         </ContainerData>
+        <ButtonHome disabled={favorite.includes(data)} onClick={() => addFavorite()}>
+          {favorite.includes(data) ? "Capturado" : "Capturar"}
+          </ButtonHome>
       </Container>
     </>
   );
