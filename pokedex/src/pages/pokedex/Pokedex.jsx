@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Button, CardContainer, CardImg } from "../../components/card/styled";
-import { Header } from "../../components/header/styled";
+import HeaderComponent from "../../components/header/Header";
 import { FavoriteContext } from "../favorites/favoritesContext";
 
 const Pokedex = () => {
@@ -9,8 +9,7 @@ const Pokedex = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <Header />
-      <Button onClick={() => navigate("/home")}>Voltar</Button>
+      <HeaderComponent paginaDetalhe={true} />
       {favorite &&
         favorite.map((item) => {
           return (

@@ -10,7 +10,7 @@ import { ContainerData } from "./styled";
 import { Type } from "./styled";
 import { Moves } from "./styled";
 import { Progress } from "./styled";
-import HeaderComponent from "../../components/header/Header"
+import HeaderComponent from "../../components/header/Header";
 
 function DetailsPage() {
   const pathParams = useParams();
@@ -25,12 +25,11 @@ function DetailsPage() {
         setStats(response.data.stats);
         setTypes(response.data.types);
       })
-      .catch((error) => {
-      });
+      .catch((error) => {});
   }, []);
   return (
     <>
-    <HeaderComponent paginaDetalhe={true} />
+      <HeaderComponent paginaDetalhe={true} />
       <Container>
         <ContainerData>
           <Images>
@@ -51,6 +50,7 @@ function DetailsPage() {
                     <Progress value={stat.base_stat} max="100">
                       {stat.base_stat}
                     </Progress>
+                    {stat.base_stat}
                   </p>
                 );
               }
@@ -77,7 +77,7 @@ function DetailsPage() {
           </ContainerTypeMoves>
         </ContainerData>
       </Container>
-      </>
+    </>
   );
 }
 export default DetailsPage;
