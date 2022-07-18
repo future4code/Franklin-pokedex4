@@ -2,7 +2,6 @@ import React from "react";
 import { Abilits, AbilitsGroup, BaseStat } from "./styled";
 
 const Pokeinfo = ({ data }) => {
-  console.log(data);
   return (
     <>
       {!data ? (

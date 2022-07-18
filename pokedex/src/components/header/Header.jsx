@@ -5,7 +5,6 @@ import logo from "../../images/logo-pokemon.png";
 import { useNavigate } from "react-router-dom";
 
 function HeaderComponent(props) {
-  console.log(props);
   const navigate = useNavigate();
   return (
     <Header>
@@ -16,7 +15,7 @@ function HeaderComponent(props) {
         <ImgPoke src={logo} />
       </div>
       <div>
-        <ButtonHome>Pokédex</ButtonHome>
+        <ButtonHome onClick={() => navigate("/pokedex")}>Pokédex</ButtonHome>
       </div>
     </Header>
   );

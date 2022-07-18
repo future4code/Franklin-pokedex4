@@ -15,12 +15,10 @@ const HomePage = () => {
   const pokeFun = async () => {
     setLoading(true);
     const res = await axios.get(url);
-    //  console.log(res.data);
     setNextUrl(res.data.next);
     setPrevUrl(res.data.previous);
     getPokemon(res.data.results);
     setLoading(false);
-    // console.log(pokeData);
   };
   const getPokemon = async (res) => {
     res.map(async (item) => {

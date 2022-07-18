@@ -26,7 +26,6 @@ function DetailsPage() {
         setTypes(response.data.types);
       })
       .catch((error) => {
-        console.log(error);
       });
   }, []);
   return (
