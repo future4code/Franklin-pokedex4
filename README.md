@@ -4,7 +4,7 @@ Nome dos integrantes:
 - 💄 Joely Maria Rabelo Brito
 - 💄 Maria Isabel Mendonça da Silva
 - 🪢 Thiago Henrique Siebri Dutra
-Link do Surge: <<pokedex-franklin04.surge.sh>>
+- Link do Surge: <<pokedex-franklin04.surge.sh>>
 
 Todos os requisitos propostos funcionam, além disso também o site é responsivo.
 <img width="1680" alt="image" src="https://user-images.githubusercontent.com/41929275/179452643-a1edf919-f0c1-496b-b1ef-d17d51e00a05.png">
